@@ -9,7 +9,7 @@ I think it's important to accommodate these long running processes as well as th
 - John Hutchison [[LinkedIn](https://www.linkedin.com/in/john-hutchison-is-awesome/)]
 - Yogesh Pekhale [[LinkedIn](https://www.linkedin.com/in/yogeshpekhale/)]
 - Sorin Slavescu  [[LinkedIn](https://www.linkedin.com/in/sorin-slavescu/)]
--
+
 
 ## Table of Contents 
 ```
