@@ -5,7 +5,7 @@ I think it's important to accommodate these long running processes as well as th
 [diagram](/ideas.drawio.png)
 
 ## Members
--John Hutchison [[LinkedIn]([https://www.linkedin.com/in/gibran-castillo/](https://www.linkedin.com/in/john-hutchison-is-awesome/ ))]
+- John Hutchison [[LinkedIn](https://www.linkedin.com/in/john-hutchison-is-awesome/)]
 - Yogesh Pekhale [[LinkedIn](https://www.linkedin.com/in/yogeshpekhale/)]
 - Sorin Slavescu  [[LinkedIn](https://www.linkedin.com/in/sorin-slavescu/)]
 - Vaibhav Agarwal [[LinkedIn](https://www.linkedin.com/in/vaibhav-agarwal-39500914/)]
