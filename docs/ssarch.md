@@ -61,6 +61,7 @@ The system interacts with external entities such as candidates, employers, payme
 - **Job Service**
 - **S.M.A.R.T. Story Generation Service**
 - **Matching Engine**
+- **HR Integration**
 - **Payment Processing Service**
 - **Notification Service**
 - **Analytics Platform**
@@ -80,6 +81,7 @@ The system interacts with external entities such as candidates, employers, payme
 - **S.M.A.R.T. Story Generation Service**: Facility to create S.M.A.R.T. stories describing each candidate that submits a new or updated CV. Uses AI (LLMs) to generate these stories.
 - **Job Service**: Manages the submission and storage of job specifications by employers.
 - **Matching Engine**: Compares S.M.A.R.T. stories with job specifications to identify suitable matches. Uses AI (LLMs) to best identify stories that match the job requirements
+- **HR Integration**: Abstraction layer to enable integraiton of HR Systems. Subscribes to specific Events and provides a unique interface through which the ClearView System plugs any external HR system in
 - **Payment Processing Service**: Manages transactions for employers to unlock full CVs.
 - **Notification Service**: Sends communications to employers regarding matches, to candidates regarding unlocking events, and other relevant notifications.
 - **Analytics Platform**: Facility to manage business reporting.
