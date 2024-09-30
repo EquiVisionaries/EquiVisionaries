@@ -45,6 +45,16 @@ Design a secure, scalable, and user-friendly platform that streamlines the recru
 
 The system interacts with external entities such as candidates, employers, payment services, other HR systems, and LLM service providers.
 
+#### **Requirements and Fulfillment**
+
+- The S.M.A.R.T. Story Generation Service will leverage AI to create S.M.A.R.T. story from a candidate's resume. This story will be anonomyzed and scrubbed free of cultural/racial and other indicators of a candidate's status as a member of any minority category. These functions will be completed by AI.
+
+- The Matching Service will use AI to match the deconstructed candiate resumes and the decontructed Employer job posting based on skills and experiences. Scores will be assigned to the matches based on level of similarity, and these scores will be stored in a database for future analyization.  When scores meet a thershold to be determined by stakeholders, the candidate/job posting pair will be returned as a Match.
+
+- The Resume Tip Service will leverge AI to generate tips that candidates can optionally incorprate into their resumes.
+
+- Data about similarity scores between S.M.A.R.T. stories job posting will be stored in the back end, as will employer actions (unlocking a resume, passing on or hiring a candadite), original and modified resumes, and responsies to employer and candidate surveys.
+
 #### **System Boundaries**
 
 - **Included**: All functionalities related to CV submission, job specification submission, S.M.A.R.T. story generation, matching, communication with employers, and payment processing.
