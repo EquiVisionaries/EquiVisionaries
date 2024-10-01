@@ -133,7 +133,7 @@ The system interacts with external entities such as candidates, employers, payme
 - **Observability Platform**
   
 #### **Sequence Diagrams**
- [[Sequence Diagrams](./sequencediagrams/)] 
+ [[Sequence Diagrams](./images/sequencediagrams/)] 
 
 
 ### 5. **Architectural Views**
