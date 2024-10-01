@@ -78,7 +78,7 @@ Design a secure, scalable, and user-friendly platform that streamlines the recru
 | **Scalability**  | The ability to grow and manage increasing demand, ensuring that system performance remains stable as the number of users or data volume increases. | ClearView should handle growing amounts of job postings, candidates, and feedback data without impacting system performance. | Use cloud services (AWS, Azure) with auto-scaling capabilities, and adopt stateless services with horizontal scaling for heavy AI processing tasks. |
 | **Workflow**  | The definition and automation of the series of tasks or processes (e.g., resume uploads, profile anonymization, interview feedback).. | Effective workflow ensures that all users (candidates, employers, admins) can follow clear steps and easily interact with the system’s features. | Design workflows that automate processes like resume parsing, bias detection, and candidate feedback collection, using state machines or workflow engines. |
 
-![actor-action-component-1](images/ClearviewContext.png)
+![actor-action-component-1](images/archstyles-select-Event.jpeg)
 
 ### 3. **Stakeholders**
 
