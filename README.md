@@ -35,16 +35,16 @@
 ```
 ### 1. **Introduction**
 
-#### ** 1.1 Purpose**
+#### **Purpose**
 
 This document presents the architectural design for a platform that connects job candidates with employers. The system allows candidates to submit their CVs, employers to post job specifications, generates anonymised S.M.A.R.T. stories from candidate CVs, matches candidates to job specs, and enables employers to unlock full CVs upon payment. The focus is exclusively on design details, excluding any implementation specifics or technology choices.
 
-#### ** 1. Scope**
+#### **Scope**
 
 The architecture covers the following functionalities:
 
 - The platform must leverage AI to re-construct job seeker resumes into a S.M.A.R.T goal format and quantifiable align their experience to open roles posted by the hiring manager.
-- Similarity Score/Match with job descriptions is a hard requirements
+- Similarity Score/Match with job descriptions is a hard requirement
 - AI provided resume tips is a hard requirement
 - AI eliminating any potential racial, lifestyle, cultural, etc. indicators is a hard requirement
 - Backend process data aggregation is a hard requirement
