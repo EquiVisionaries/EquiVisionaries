@@ -71,9 +71,9 @@ Design a secure, scalable, and user-friendly platform that streamlines the recru
 - **Anonymity Requirements**: Maintain candidate confidentiality until authorised disclosure.
 - **Resource Limitations**: Design within budgetary and operational constraints.
 
-#### **High-level View**
+#### **High-level System OverView**
 
-![actor-action-component-1](images/systemOverview.png)
+![actor-action-component-1](images/system-overview.png)
 
 
 #### **Key Architecture Characteristics**
@@ -89,7 +89,7 @@ Design a secure, scalable, and user-friendly platform that streamlines the recru
 
 ![actor-action-component-1](images/archstyles-Final.png)
 
-*Both Microservices and Event Driven architecture options have trade-offs, so we decided to go with event driven.*
+*See ADRs for further discussion*
 
  #### **Architecture Decision Records (ADRs) **
  [[ADR](./adr/)] 
