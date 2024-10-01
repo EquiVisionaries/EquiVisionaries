@@ -73,7 +73,7 @@ Design a secure, scalable, and user-friendly platform that streamlines the recru
 
 #### **High-level View**
 
-![actor-action-component-1](images/roughsketch.png)
+![actor-action-component-1](images/systemOverview.png)
 
 
 #### **Key Architecture Characteristics**
