@@ -80,6 +80,8 @@ Design a secure, scalable, and user-friendly platform that streamlines the recru
 
 ![actor-action-component-1](images/archstyles-Final.png)
 
+*Both Microservices and Event Driven architecture options have trade-offs, so we decided to go with event driven.*
+
 ### 3. **Stakeholders**
 
 - **Candidates**: Individuals seeking employment opportunities.
