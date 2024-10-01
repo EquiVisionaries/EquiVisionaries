@@ -18,6 +18,8 @@
   2.3 Constraints
   2.4 High-level View
   2.5 Key Architecture Characteristics
+  2.6 Architecture Decision Records (ADRs)
+
 3. Stakeholders
  
 4. System Overview
@@ -88,6 +90,9 @@ Design a secure, scalable, and user-friendly platform that streamlines the recru
 ![actor-action-component-1](images/archstyles-Final.png)
 
 *Both Microservices and Event Driven architecture options have trade-offs, so we decided to go with event driven.*
+
+ #### **Architecture Decision Records (ADRs) **
+ [[ADR](./adr/)] 
 
 ### 3. **Stakeholders**
 
