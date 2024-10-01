@@ -16,7 +16,8 @@
   2.1 Architectural Vision
   2.2 Design Principles
   2.3 Constraints
-  2.4 Key Architecture Characteristics
+  2.4 High-level View
+  2.5 Key Architecture Characteristics
 3. Stakeholders
  
 4. System Overview
@@ -67,6 +68,12 @@ Design a secure, scalable, and user-friendly platform that streamlines the recru
 - **Regulatory Compliance**: Adhere to data protection laws.
 - **Anonymity Requirements**: Maintain candidate confidentiality until authorised disclosure.
 - **Resource Limitations**: Design within budgetary and operational constraints.
+
+#### **High-level View**
+
+![actor-action-component-1](images/roughsketch.png)
+
+
 #### **Key Architecture Characteristics**
 | **Characteristic** | **Description**                                                                                                                         | **Why It’s Important for ClearView**                                                                                                    | **Implementation Considerations**                                                                                                                           |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
