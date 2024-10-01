@@ -12,7 +12,7 @@
 1. Introduction
   1.1 Purpose
   1.2 Scope
-2. Architectural Goals and Constraints
+2. Architecture Analysis
   2.1 Architectural Vision
   2.2 Design Principles
   2.3 Constraints
@@ -67,7 +67,10 @@ Design a secure, scalable, and user-friendly platform that streamlines the recru
 - **Regulatory Compliance**: Adhere to data protection laws.
 - **Anonymity Requirements**: Maintain candidate confidentiality until authorised disclosure.
 - **Resource Limitations**: Design within budgetary and operational constraints.
-
+#### **Key Architecture Characteristics**
+| **haracteristic** | **Description**                                                                                                                         | **Why It’s Important for ClearView**                                                                                                    | **Implementation Considerations**                                                                                                                           |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Evolvability**  | The system’s ability to be easily modified and extended over time, allowing new features, technologies, or components to be integrated. | ClearView needs to adapt to changing hiring practices, new AI technologies, and updated DEI (Diversity, Equity, Inclusion) regulations. | Use modular design patterns, microservices architecture, and version control to allow independent updates and extensions without affecting the core system. |
 ### 3. **Stakeholders**
 
 - **Candidates**: Individuals seeking employment opportunities.
