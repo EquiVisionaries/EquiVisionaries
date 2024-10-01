@@ -1,0 +1,24 @@
+title This is a title
+
+participant "Resume Service" as ResumeSVC
+
+participant "Resume Topic" as ResumeTopic
+participant "SMARTStory Generator" as SmartStoryGen
+participant "Resume Storage" as Resume Storage
+
+participant "Generative LLM (GPT)" as Generative LLM
+ResumeTopic->SmartStoryGen
+ResumeTopic<--SmartStoryGen
+note over SmartStoryGen,Resume Storage
+SmartStoryGen->(3)Resume Storage
+ResumeTopic<-SmartStoryGen:Consume(ResumeEV)
+SmartStoryGen->SmartStoryGen:Parse(ResumeEV)
+SmartStoryGen->Resume Storage:GetResume(ResumeID)
+SmartStoryGen<--Resume Storage:Resume
+SmartStoryGen->Generative LLM:GenerateSMART(Prompt, Resume)
+SmartStoryGen<--Generative LLM:SMARTStory
+SmartStoryGen->Resume Storage:store(SMARTStory)
+ResumeTopic<-SmartStoryGen:Publish(SMARTStoryEV)
+ResumeSVC->ResumeTopic:Consume(SMARTStoryEV)
+ResumeSVC->ResumeSVC:Parse(SMARTStoryEV)
+ResumeSVC->ResumeSVC:updateCandidate(SMARTStory, CandidateID)

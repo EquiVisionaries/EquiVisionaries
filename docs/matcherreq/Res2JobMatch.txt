@@ -1,0 +1,39 @@
+title Resume to Jobs Matching
+
+participant "Resume Topic" as ResumeTopic
+participant "Embeddings Generator" as EmbeddingsGen
+
+JobTopic->JobTopic
+JobTopic<--JobTopic
+participant "Resume Embeddings\nVector DB" as ResumeEmbeddingsStorage
+participant "Matcher Service" as MatchersSVC
+
+participant "Job Service" as JobService
+
+participant "Job Embeddings\nVector DB" as JobEmbeddings
+
+participant "Job Topic" as JobTopic
+
+ResumeTopic<-EmbeddingsGen:Consume(ResumeEv)
+note over JobTopic,EmbeddingsGen
+JobTopic->(3)EmbeddingsGen
+EmbeddingsGen->EmbeddingsGen:Parse(ResumeEv)
+EmbeddingsGen->EmbeddingsGen:EmbedSkills
+EmbeddingsGen->EmbeddingsGen:EmbedExperience
+EmbeddingsGen->EmbeddingsGen:EmbedQualis
+EmbeddingsGen->EmbeddingsGen:ProduceEmbeddings
+EmbeddingsGen->ResumeEmbeddingsStorage:Store(embeddings)
+ResumeTopic<-EmbeddingsGen:Publish(EmbeddingsEv)
+ResumeTopic<-MatchersSVC:Consume(EmbeddingsEv)
+MatchersSVC->JobService:GetActiveJobs
+MatchersSVC<--JobService:JobIDs[]
+MatchersSVC->JobEmbeddings:GetJobEmbeddings(JobIDs[])
+MatchersSVC<--JobEmbeddings:JobEmbeddings[]
+MatchersSVC->MatchersSVC:MatchJobs2Resume
+MatchersSVC->MatchersSVC:StoreMatch(JobID, MatcherID, score)
+JobTopic<-MatchersSVC:Publish(MatcherEv(JobID,ResumeID, score))
+JobService->JobTopic:Consume(MatcherEv)
+JobTopic->JobTopic
+JobTopic->JobTopic
+JobService->JobService:Parse(MatcherEv)
+JobService->JobService:UpdateJob(JobID, ResumeID)

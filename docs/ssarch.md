@@ -93,9 +93,9 @@ The system interacts with external entities such as candidates, employers, payme
 **Interactions and Responsibilities**
 
 1. **Resume Submission**: Candidates submit their CVs via the Candidate Dashboard, which are then stored by the Resume Service. A new Resume Event is generated containing the candidate ID, resume location, etc.
-2. **S.M.A.R.T. Story Generation**: This component subscribes to Resume Events. It collects the new or updated resume and generates a new S.M.A.R.T. story for the specific candidate. Stores the S.M.A.R.T. story in the appropriate location and then generates SMARTStory Event, which contains the candidate ID and SMART story location
+2. **S.M.A.R.T. Story Generation**: This component subscribes to Resume Events. It collects the new or updated resume and generates a new S.M.A.R.T. story for the specific candidate. Stores the S.M.A.R.T. story in the appropriate location and then generates SMARTStory Event, which contains the candidate ID and SMART story location. The SMARTStory Event will be consumed by the notification service to inform the candidate that a new SMART Story is available.
 3. **Job Spec Submission**: Employers submit job specifications through the Employer Dashboard, which are then stored by the Job Service. A new Job Event is generated containing the Employer ID, Job ID, Job location, etc.
-4. **Matching**: The Matching Engine compares S.M.A.R.T. stories with job specs to find potential matches. It subscribes to Job and SMARTStory Events and produces Matcher Events containing the Candidate ID, Job ID. The Job Service subscribes to Matcher Events and updates the Job ID with the Candidate ID from the Event. If the SMARTStory Event started the Matching process the Matching process goes through all unfilled Jobs and produces a matchnig score against the new SMARTStory. Matches above a configureable score threshold are then published as Matcher events. 
+4. **Matching**: The Matching Engine compares Resumes with Job specs to find potential matches. It subscribes to Job and Resume Events and produces Matcher Events containing the Resume ID, Job ID and a score, one event per match. The Job Service subscribes to Matcher Events and updates the Job ID with the Resume ID from the Event. If the Resume Event started the Matching process the Matching process goes through all unfilled Jobs and produces a matching score against the new Resume. Matches above a configureable score threshold are then published as Matcher events. Similarly for new Job events the component finds the Resumes that match the Job description with a score over an accepted threashold. A more detailed description of the Matching process can be found in the detailed requirement design document [[here](/docs/matchrreq/matcher.md)] 
 5. **Communication**: The Notification Module informs employers of potential matches. It can also be configured to inform candidates if necessary. It is subscribing to Matcher, Job, Resume, SMARTStory events and produces notifications as required.
 6. **Payment and Access**: Employers use the Payment Service to unlock full CVs, which are then accessible via the Employer Dashboard. The Employers dashboard queries the Resume Service to request all accessible CVs. Using this information for each Job and available Matches, the Employer Dashboard will provide links to accessible Resumes.
 
@@ -116,7 +116,7 @@ The system interacts with external entities such as candidates, employers, payme
 
 **Communication Mechanisms**
 
-- Modules communicate through well-defined interfaces, utilizing synchronous or asynchronous messaging as appropriate.
+- Modules communicate through well-defined events, utilizing asynchronous messaging. When necesssary and more appropriate the services can communicate via well defined interfaces using synchronous communication but we envisage a prevelant events based integration.
 - Events and notifications are managed to keep users informed without overloading the system.
 
 #### **5.5 Data View**
@@ -159,4 +159,4 @@ The system interacts with external entities such as candidates, employers, payme
 - **Scalability Limitations**: Potential challenges in handling rapid growth.
 - **Compliance Violations**: Risk of non-compliance with evolving regulations.
 - **Security Threats**: Possibility of new vulnerabilities emerging over time.
-- **AI Risks**: Prompt attack.s. Gen AI can produce harmful, violent or offensive content. 
+- **AI Risks**: Prompt attacks. Gen AI can produce harmful, violent or offensive content. 
