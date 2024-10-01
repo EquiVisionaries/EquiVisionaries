@@ -72,6 +72,18 @@ Design a secure, scalable, and user-friendly platform that streamlines the recru
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Evolvability**  | The system’s ability to be easily modified and extended over time, allowing new features, technologies, or components to be integrated. | ClearView needs to adapt to changing hiring practices, new AI technologies, and updated DEI (Diversity, Equity, Inclusion) regulations. | Use modular design patterns, microservices architecture, and version control to allow independent updates and extensions without affecting the core system. |
 | **Fault-Tolerance**  | The system’s ability to continue functioning even when one or more components fail. | Ensures that ClearView remains operational during server failures or component crashes, preserving data integrity and user experience. | Ensures that ClearView remains operational during server failures or component crashes, preserving data integrity and user experience. |
+
+| **Integration**  | The ability to connect and exchange information with external systems such as HR platforms (e.g., Workday, SAP SuccessFactors). |ClearView requires seamless data exchange with external HR systems to pull job descriptions and push candidate evaluation reports. | Use RESTful APIs, OAuth2 for secure authentication, and standardized data exchange protocols to support smooth integration with third-party systems. |
+
+| **Interoperability**  | The system’s capability to work across different platforms, services, and tools, enabling communication and cooperation between different systems. | ClearView needs to work across diverse HR platforms, cloud providers, and different operating systems used by employers and candidates. | Use open standards, industry-standard protocols (e.g., HTTP, JSON), and ensure compatibility with various HR systems and cloud providers. |
+
+| **Performace**  | TThe system’s ability to execute tasks quickly and efficiently, ensuring low latency and high responsiveness for all users (employers, candidates). | High performance is crucial for user satisfaction, especially when processing large datasets like resumes, job listings, and candidate assessments in real time. | Optimize AI processing, use caching for frequently accessed data, and implement efficient algorithms for resume parsing and job matching. |
+
+| **Scalability**  | The ability to grow and manage increasing demand, ensuring that system performance remains stable as the number of users or data volume increases. | ClearView should handle growing amounts of job postings, candidates, and feedback data without impacting system performance. | Use cloud services (AWS, Azure) with auto-scaling capabilities, and adopt stateless services with horizontal scaling for heavy AI processing tasks. |
+
+| **Workflow**  | The definition and automation of the series of tasks or processes (e.g., resume uploads, profile anonymization, interview feedback).. | Effective workflow ensures that all users (candidates, employers, admins) can follow clear steps and easily interact with the system’s features. | Design workflows that automate processes like resume parsing, bias detection, and candidate feedback collection, using state machines or workflow engines. |
+
+
 ### 3. **Stakeholders**
 
 - **Candidates**: Individuals seeking employment opportunities.
