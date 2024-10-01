@@ -12,15 +12,3 @@ Decision: The intial style will make use of an event-driven Architecture, but to
 Consequenses: A message broker will need be defined and configured.  The system overall will be more complex than an a synchronous-based solution.
 The system will be more complex to set up initally than a rest-based solution, but should be easier to reason about, maintain and evolve.  
 
-//stuff we need to do in prioirity order
-readme.MD  organize
-
-ADRs
-- use chat gpt to start with (maybe)git
-- 
-
-seqeunce diagram
-
-
-add data aggregation service to arch diagram
-make image of arch diagram 
