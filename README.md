@@ -106,6 +106,7 @@ Design a secure, scalable, and user-friendly platform that streamlines the recru
 
 The system interacts with external entities such as candidates, employers, payment services, other HR systems, and LLM service providers.
 ![actor-action-component-1](images/ClearviewContext.png)
+
 #### **System Boundaries**
 
 - **Included**: All functionalities related to CV submission, job specification submission, S.M.A.R.T. story generation, matching, communication with employers, and payment processing.
@@ -130,6 +131,10 @@ The system interacts with external entities such as candidates, employers, payme
 - **IAM**
 - **Message Broker**
 - **Observability Platform**
+  
+#### **Sequence Diagrams**
+ [[Sequence Diagrams](./sequencediagrams/)] 
+
 
 ### 5. **Architectural Views**
 
